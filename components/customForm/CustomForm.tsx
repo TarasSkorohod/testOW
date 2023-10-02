@@ -56,7 +56,6 @@ const schema = yup.object({
 export const CustomForm = () => {
   const botToken = TELEGRAM_BOT_TOKEN;
   const chatId = TELEGRAM_CHAT_ID;
-  console.log(TELEGRAM_BOT_TOKEN)
   const [charCount, setCharCount] = useState(0);
 
   const formAnimation = {

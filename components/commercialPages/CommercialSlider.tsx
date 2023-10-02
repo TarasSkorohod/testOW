@@ -9,7 +9,6 @@ import { sliderDataC} from "@/data/dataSliderCommercial/EditSliderDataCommercial
 import {CurrentSlideDataC, DataSliderC} from "@/data/dataSliderCommercial/DataTepe";
 
 
-
 export default function CommercialSlider() {
     const [data, setData] = React.useState<DataSliderC[]>(sliderDataC.slice(1));
     const [transitionData, setTransitionData] = React.useState<DataSliderC>(
