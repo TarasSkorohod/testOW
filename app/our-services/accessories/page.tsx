@@ -30,7 +30,6 @@ export default function Accessories() {
           />
         </div>
       </div>
-        <PartnersSlider />
           <Title tag="h4" cn="mb-10">
               Form
           </Title>
