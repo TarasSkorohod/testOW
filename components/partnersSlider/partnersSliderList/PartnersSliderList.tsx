@@ -11,7 +11,6 @@ import { IPartner } from "@/interfaces/partners";
 interface IPartnersListProps {
   partners: IPartner[];
 }
-
 export const PartnersSliderList: FC<IPartnersListProps> = ({ partners }) => {
   const partnersSliderListAnimation = {
     hidden: {
@@ -67,20 +66,18 @@ export const PartnersSliderList: FC<IPartnersListProps> = ({ partners }) => {
   };
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      variants={partnersSliderListAnimation}
-      viewport={{ once: true }}
-      className="py-4 z-30 sm:px-8 lg:px-0"
-    >
-      <Slider className="py-6" {...settings}>
-        {partners !== undefined
-          ? partners.map((partner) => (
+      <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={partnersSliderListAnimation}
+          viewport={{ once: true }}
+          className="py-4 z-30 sm:px-8 lg:px-0"
+      >
+        <Slider className="py-6" {...settings}>
+          {partners?.map((partner) => (
               <ItemPartnersSlider partner={partner} key={uuidv4()} />
-            ))
-          : null}
-      </Slider>
-    </motion.div>
+          ))}
+        </Slider>
+      </motion.div>
   );
 };
